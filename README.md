@@ -9,18 +9,18 @@
 
 [TOC]
 
-#Regras de negócio
+# Regras de negócio
 
 
 
-##Regras de negócio
+## Regras de negócio
 
 - Se a temperatura (célsius) estiver acima de 30 graus, sugira faixas para festa
 - Caso a temperatura esteja entre 15 e 30 graus, sugira faixas de música pop
 - Se estiver um pouco frio (entre 10 e 14 graus), sugira faixas de rock
 - Caso contrário, se estiver congelando lá fora, sugere faixas de música clássica
 
-##Api's para consulta
+## Api's para consulta
 
 -  [https://openweathermap.org](https://openweathermap.org)
 -- Para facilitar a integração, utilize essa chave de API:
@@ -30,10 +30,10 @@
 >Client Id: 4d8f63b3e1894c73a9d6fa0e7085e60f
 >Client secret: 6dd251a17f9a422b9ba04175438ad8ab
 
-#Solução
+# Solução
 
 
-##Tecnologias Utilizadas.
+## Tecnologias Utilizadas.
 
 * NodeJs - Com TypeScript
 * ExpressJs
@@ -42,11 +42,11 @@
 * <abbr title="Biblioteca para facilitar a consulta node.">spotify-web-api-node</abbr>
 * <abbr title="Para consumo das Api's">axios</abbr>
 
-##Como Acessar.
+## Como Acessar.
 
 Atualmente a Api esta hospedada no Cloud do [Heroku](heroku.com) para acessar use o link [https://api-skalena.herokuapp.com/docs](https://api-skalena.herokuapp.com/docs) onde será possível testa on-line.
 
-##Acessando Local
+## Acessando Local
 
 Primeiro passo faça o Clone do Projeto para uma pasta local 
 > git clone git@github.com:feijaoguida/apiTS.git
