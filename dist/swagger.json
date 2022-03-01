@@ -1,0 +1,55 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Teste",
+        "description": "API Recomendação de Genero conforme temperatura",
+        "version": "1.0"
+    },
+    "host": "localhost:3333",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/sugestions": {
+            "get": {
+                "description": "Informe a Cidade.",
+                "consumes": "application/json",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "city",
+                        "description": "Informe o nome da Cidade que deseja pesquisar",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {}
+                }
+            }
+        },
+        "/recommendation": {
+            "get": {
+                "description": "Recomendação de Genero Musical.",
+                "consumes": "application/json",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "seed_genres",
+                        "description": "Informe o Genero desejado. Ex. 'pagode'",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Informe o Limite desejado para retorno",
+                        "type": "number"
+                    }
+                ],
+                "responses": {
+                    "201": {}
+                }
+            }
+        }
+    }
+}
