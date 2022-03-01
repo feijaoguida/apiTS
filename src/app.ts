@@ -3,7 +3,7 @@ import { router } from './routes'
 import swaggerUi from 'swagger-ui-express'
 import cors from 'cors'
 
-const swaggerDocument = require('../swagger.json')
+import swaggerDocument from '../swagger.json'
 
 const app = express()
 
