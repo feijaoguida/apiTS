@@ -4,10 +4,8 @@
 
 # Tecnologias
 
+**Table of contents**
 
-[TOCM]
-
-[TOC]
 
 # Regras de negócio
 
@@ -23,11 +21,15 @@
 ## Api's para consulta
 
 -  [https://openweathermap.org](https://openweathermap.org)
+
 -- Para facilitar a integração, utilize essa chave de API:
+
 >b77e07f479efe92156376a8b07640ced
 - [https://developer.spotify.com](https://developer.spotify.com)
+
 -- Para facilitar a integração, utilize este conjunto de informações:
 >Client Id: 4d8f63b3e1894c73a9d6fa0e7085e60f
+
 >Client secret: 6dd251a17f9a422b9ba04175438ad8ab
 
 # Solução
