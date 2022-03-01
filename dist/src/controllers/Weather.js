@@ -25,7 +25,7 @@ class Weather {
             });
             const grausCelcios = parseFloat((0, helpers_1.converterGraus)(grausKelvin.main.temp));
             let genre = (0, helpers_1.validaGenre)(grausCelcios);
-            let listSuggestion = yield (0, validarSpotify_1.validarSpotify)(genre, 15);
+            let listSuggestion = yield (0, validarSpotify_1.validarSpotify)(genre, 40);
             return response.json(listSuggestion);
         });
     }

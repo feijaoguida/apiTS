@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "Teste",
-        "description": "API Recomendação de Genero conforme temperatura",
+        "title": "Teste técnico nível pleno",
+        "description": "Crie um micro serviço capaz de aceitar requisições RESTful recebendo como parâmetro o nome da cidade ou as coordenadas longitudinais e retorna uma sugestão de playlist (somente nomes de faixas é bom) de acordo com a temperatura atual.",
         "version": "1.0"
     },
     "host": "localhost:3333",
@@ -13,7 +13,7 @@
     "paths": {
         "/sugestions": {
             "get": {
-                "description": "Informe a Cidade.",
+                "description": "Recomenda as faixa conforme cidade informada.",
                 "consumes": "application/json",
                 "parameters": [
                     {

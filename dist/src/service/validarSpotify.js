@@ -12,18 +12,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.validarSpotify = void 0;
 const api_1 = require("../service/api");
 const authorizationSpotify_1 = require("../service/authorizationSpotify");
-function validarSpotify(seed_genres, limit = 10) {
+function validarSpotify(seed_genres, limit = 30) {
     return __awaiter(this, void 0, void 0, function* () {
         const token = yield (0, authorizationSpotify_1.generateToken)();
-        const recommendations = yield api_1.apiSpotify.get("", {
+        const recommendations = yield api_1.apiSpotify
+            .get("", {
             headers: { Authorization: "Bearer " + token },
-            params: { seed_genres: seed_genres, limit: limit }
+            params: { seed_genres: seed_genres, limit: limit },
         })
             .then((response) => response.data)
             .catch((error) => {
             return error;
         });
-        return recommendations;
+        const names = recommendations.tracks.map((r) => r.album.artists[0].name);
+        return names;
     });
 }
 exports.validarSpotify = validarSpotify;

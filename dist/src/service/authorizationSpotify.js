@@ -26,7 +26,7 @@ function generateToken() {
             spotifyAPi.setAccessToken(data.body['access_token']);
             return data.body['access_token'];
         }, function (err) {
-            console.log('Something went wrong when retrieving an access token', err.message);
+            console.log('Alguma coisa deu errado enquando recebia o access token', err.message);
         });
         return token;
     });
