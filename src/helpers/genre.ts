@@ -1,20 +1,20 @@
 export function validaGenre(grausCelcios: number) {
-  let genre: string
-    
+  let genre: string;
+
   switch (true) {
     case grausCelcios < 10:
-      genre = "classical"
+      genre = "classical";
       break;
     case grausCelcios < 15:
-      genre = "rock"
+      genre = "rock";
       break;
     case grausCelcios < 30:
-      genre = "pop"
+      genre = "pop";
       break;
     default:
-      genre = "party"
+      genre = "party";
       break;
   }
 
-  return genre
+  return genre;
 }

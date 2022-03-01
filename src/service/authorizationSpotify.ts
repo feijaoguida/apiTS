@@ -16,7 +16,7 @@ let token = await spotifyAPi.clientCredentialsGrant().then(
   },
   function(err) {
     console.log(
-      'Something went wrong when retrieving an access token',
+      'Alguma coisa deu errado enquando recebia o access token',
       err.message
     );
   }

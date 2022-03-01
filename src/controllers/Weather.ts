@@ -23,7 +23,7 @@ class Weather {
 
     let genre = validaGenre(grausCelcios)
     
-    let listSuggestion = await validarSpotify(genre, 15)
+    let listSuggestion = await validarSpotify(genre, 40)
     
     return response.json(listSuggestion)
   };
