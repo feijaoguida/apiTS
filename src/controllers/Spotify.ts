@@ -1,6 +1,7 @@
 import { Request, Response } from 'express'
 
-import { validarSpotify } from '../service/validarSpotify'
+import { apiSpotify } from '../service/api'
+import { generateToken } from '../service/authorizationSpotify' 
 
 class Spotify { 
   
@@ -8,12 +9,21 @@ class Spotify {
     
     const { seed_genres, limit } = request.query
 
-    const recommendations = await validarSpotify(seed_genres, limit)
+    const token = await generateToken()
+    
+    const recommendations = await apiSpotify.get("", {
+      headers: { Authorization: "Bearer " + token },
+      params: {seed_genres: seed_genres, limit: limit}
+    })
+    .then((response) => response.data)
+    .catch((error) => {
+      return error;
+    }) 
 
     return response.json(recommendations) 
 
   }
 }
  
-export default Spotify
+export default Spotify 
   
